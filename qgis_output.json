@@ -1,0 +1,25 @@
+{
+    "area_units": "m2",
+    "distance_units": "meters",
+    "ellipsoid": "PARAMETER:6378137:6356752.31414035614579916",
+    "inputs": {
+      "ANTIALIAS": true,
+      "BACKGROUND_COLOR": "rgba( 0, 0, 0, 0.00 )",
+      "DPI": 96,
+      "EXTENT": "1375380.887800000,1379358.266000000,1142082.349800000,1144827.860600000 []",
+      "HTML_ATTRIBUTION": "",
+      "HTML_OSM": false,
+      "HTML_TITLE": "",
+      "METATILESIZE": 4,
+      "OUTPUT_DIRECTORY": "C:\\Code\\treeport-lidar\\slope",
+      "OUTPUT_HTML": "TEMPORARY_OUTPUT",
+      "QUALITY": 75,
+      "TILE_FORMAT": 0,
+      "TILE_HEIGHT": 256,
+      "TILE_WIDTH": 256,
+      "TMS_CONVENTION": false,
+      "ZOOM_MAX": 18,
+      "ZOOM_MIN": 12
+    },
+    "project_path": "C:/Code/treeport-topo/treeport-topo.qgz"
+  }

@@ -1,47 +1,26 @@
 # Treeport LIDAR Tiles
 
-This repository contains LIDAR map tiles hosted via GitHub Pages.
+This repository contains LIDAR map tiles that can be used directly in CalTopo and other mapping applications via GitHub's raw content URLs.
 
-## Live View
+## Usage in CalTopo
 
-Once deployed, your tiles will be viewable at: `https://<your-username>.github.io/treeport-lidar/`
+To add this tile layer to CalTopo:
 
-## Setup Instructions
+1. Go to [CalTopo](https://caltopo.com)
+2. Click on the **Map** menu
+3. Select **Add Custom Source**
+4. Use this URL format:
+   ```
+   https://raw.githubusercontent.com/adamweld/treeport-lidar/refs/heads/main/tiles/{Z}/{X}/{Y}.png
+   ```
 
-### 1. Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on **Settings**
-3. Navigate to **Pages** in the left sidebar
-4. Under **Source**, select **GitHub Actions**
-
-### 2. Push Changes
-
-Push this repository to GitHub:
-
-```bash
-git add .
-git commit -m "Set up GitHub Pages for LIDAR tiles"
-git push origin main
-```
-
-### 3. Wait for Deployment
-
-The GitHub Actions workflow will automatically deploy your site. You can monitor the progress:
-
-1. Go to the **Actions** tab in your repository
-2. Watch the "Deploy to GitHub Pages" workflow
-3. Once complete, your site will be live
+The tiles will be loaded directly from GitHub without needing any additional hosting setup.
 
 ## Repository Structure
 
 ```
 treeport-lidar/
 ├── tiles/           # Map tiles organized as {z}/{x}/{y}.png
-├── index.html       # Interactive map viewer using Leaflet.js
-├── .github/
-│   └── workflows/
-│       └── deploy.yml  # GitHub Pages deployment workflow
 └── README.md        # This file
 ```
 
@@ -58,32 +37,19 @@ The tiles follow the standard web mapping tile format:
 
 Tiles can be accessed directly via URL:
 ```
-https://<your-username>.github.io/treeport-lidar/tiles/{z}/{x}/{y}.png
+https://raw.githubusercontent.com/adamweld/treeport-lidar/refs/heads/main/tiles/{z}/{x}/{y}.png
 ```
 
 Example:
 ```
-https://<your-username>.github.io/treeport-lidar/tiles/12/664/1415.png
+https://raw.githubusercontent.com/adamweld/treeport-lidar/refs/heads/main/tiles/12/664/1415.png
 ```
 
-## Local Development
+## Notes
 
-To test locally:
-
-1. Start a local web server in the repository directory:
-   ```bash
-   python -m http.server 8000
-   # or
-   npx serve
-   ```
-
-2. Open your browser to `http://localhost:8000`
-
-## Technologies Used
-
-- **Leaflet.js** - Interactive mapping library
-- **GitHub Pages** - Static site hosting
-- **GitHub Actions** - Automated deployment
+- No GitHub Pages setup required - tiles are served directly from the repository via raw.githubusercontent.com
+- Make sure your repository is public for the tiles to be accessible
+- GitHub has rate limits for raw content access, suitable for personal use
 
 ## License
 
